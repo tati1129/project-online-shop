@@ -1,0 +1,215 @@
+.container {
+    /* width: 825px; */
+    display: flex;
+    position: relative;
+    gap: 25px;
+    margin-bottom:20px;
+    
+}
+
+.block_image {
+    width: 190px;
+    height: 166px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    border-radius: 10px;
+}
+.container_btn {
+    position: absolute;
+    top: 3px;
+    right: 5%;
+    width: 30px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 130%;
+    /* letter-spacing: 0.03em; */
+    background: #E5E5E5;
+}
+.container_btn:active{
+    background-color: rgba(74, 77, 74, 0.397);
+    border-radius: 5px;
+}
+.container_info {
+    margin-top: 0;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container_title {
+    margin-top: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #3A3A3A;
+}
+
+.container_info_btn {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    background: #E5E5E5;
+
+}
+
+
+.container_info_btn button {
+    border: none;
+    width: 18px;
+    /* height: 2px; */
+    color: #000000;
+    /* transform: rotate(-90deg); */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    background: #E5E5E5;
+}
+
+/* .container_info_btn button:active{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+} */
+.block_price{
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    gap: 70px;
+
+}
+.discont_price{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+.discont_price span{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
+.normal_price{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    text-decoration-line: line-through;
+    color: #8B8B8B;
+}
+.line{
+    margin-bottom: 15px;
+    width: 95%;
+    height: 1px;
+    background: #A7A7A7;
+}
+@media (max-width: 520px){
+    .container{
+        width: 230px;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+    .block_image {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+    }
+    .container_btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 18px;
+        height: 18px;
+        font-size: 16px;
+        border: 1px solid black;
+        border-radius: 4px;
+        align-items: center; 
+    }
+    .container_btn:active{
+        background-color: rgba(74, 77, 74, 0.397);
+        border-radius: 5px;
+    }
+    .container_info {
+        margin-top: 0;
+        width: 100px;
+    }
+    .container_title {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 100%;
+    }
+    
+    .container_info_btn {
+        gap: 10px;
+        width: 85px;
+        height: 25px;
+        border-radius: 7px;
+        font-size: 12px;
+    }
+    .block_price{
+        flex-direction: row;
+        gap: 5px;
+        padding-left: 15px;
+        
+    }
+    .discont_price{
+        margin: 0;
+        padding-right: 15px;
+        font-size: 15px;
+    }
+    .discont_price span{
+        font-size: 9px;
+    }
+    
+    .normal_price{
+        margin: 0;
+        font-size: 12px;
+    }
+    .line{
+        margin-top: 0;
+        width: 95%;
+        height: 1px;
+        background: #A7A7A7;
+    }
+}

@@ -1,0 +1,35 @@
+.link{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    color: black;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    text-decoration: none;
+    position: relative;
+}
+.link[data-count]::after{ /* если этого атрибута нет, то он не отображается */
+   content: attr(data-count);
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   transform: translate(50%, 50%);
+   min-width: 20px;
+   height: 20px;
+   font-size: 15px;
+   color: #000;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 2px;
+
+}
+.active{
+    /* border: 2px solid red; */
+    font-weight: 700;
+    font-size: 18px;
+}

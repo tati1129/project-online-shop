@@ -1,0 +1,198 @@
+.container{
+    /* width: 1440px; */
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #E5E5E5;
+    position: relative;
+}
+.logo_block{
+    width: 250px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.logo{
+    width: 72px;
+    height: 72px;
+    margin-left: 26px;
+    display: flex;
+}
+.catalog{
+    width: 105px;
+    /* height: 50px; */
+    padding: 14px 30px 15px;
+    /* margin-left: -150px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    border: 2px solid #1a9b1a;
+    border-radius: 5px;
+    background: #339933;
+    /* border: none; */
+    
+}
+.activeCatalog{
+    font-size: 26px;
+    background: #4a8f4a;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+}
+.basket_btn{
+    border: none;
+    background: #E5E5E5;
+}
+.basket_icon{
+    /* width: 40px;
+    height: 40px;
+     */
+    /* display: flex; */
+    /* justify-content: center; */
+    font-size: 25px;
+    margin-right: 40px;
+    color: gray;
+    text-decoration: none;
+}
+.activeBasket{
+    font-size:35px;
+    /* width: 50px;
+    height: 55px;   */
+    margin-right: 40px;
+    color: rgb(58, 42, 42);
+}
+
+.links{
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    padding: 5px 10px;
+    color: black;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    text-decoration: none;
+    
+}
+.active{
+    font-weight: 700;
+    font-size: 25px;
+    
+}
+.navigation{
+    display: flex;
+    /* flex-direction: row; */
+    gap: 30px;
+}
+.navBtn{
+    margin-right: 26px;
+    display: none;
+    font-size: 40px;
+    /* background-color: transparent; */
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+@media (max-width: 520px){
+    .container{
+        height: 90px;
+    }
+    .logo_block{
+        width: 250px ;
+        justify-content: flex-start;
+    }
+    .logo{
+        width: 45px;
+        height: 45px;
+        margin-left: 10px;
+    }
+    .catalog{
+
+        width: 80px;
+        padding: 5px 10px 5px ;
+        font-size: 13px;
+        box-shadow: rgb(38, 57, 77) 0px 10px 20px -5px;
+    }
+    .links{
+        font-size: 11px;
+    }
+    .active{
+        font-weight: 700;
+        font-size: 16px;
+        
+    }
+    .activeCatalog{
+        font-size: 17px;
+    }
+    .navBtn{
+        display: block; 
+       
+    } 
+
+    .navigation{
+        background-color: rgba(0, 0, 0, 0.539);
+        width: 140px;
+        height: 130px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        font-size: 11px;
+        pointer-events: none;
+        position: absolute;
+
+       background-color: rgba(5, 90, 32, 0.607);
+    box-shadow: 0 0 5px 5px rgba(125, 214, 8, 0.495);
+    /* border-radius: 10px; */
+
+        opacity: 0; /* //сверху вниз */
+        right: 0;
+        top: 98%;
+        padding-top: 30px;
+        transform: translateY(-100%);
+        transition: transform, opacity, background;
+        transition-duration: 0.5s;
+
+        
+        
+        
+        /* right:  100%; справа к центру 
+        left: 100%;
+        top: 89px;
+        transform:translateX(-100%);
+        transition: transform;
+        transition-duration: 0.5s; */
+    }
+    .nav_open{
+        /* display: flex; */
+     
+        opacity: 1;
+        pointer-events: auto;
+        /* transform: translateX(0); */
+        /* background: #E5E5E5;*/
+        background-color: rgb(228, 240, 222);
+        transform: translateY(0); /* //сверху вниз */
+    }
+}

@@ -1,0 +1,188 @@
+.wrapper{
+    /* width: 100%; */
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin: 0 30px 30px 30px;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; */
+}
+.filter_price, .discount, .sort{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.filter_price input{
+    width: 100px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    padding-left: 10px;
+}
+.filter_price button{
+    width: 40px;
+    height: 43px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #000000;  
+}
+ 
+.filter_price button:active{
+    background-color: #339933;;
+    transition: 3ms;
+    /* border: 1px solid #4CAF50; */
+    border: none;
+    color: #fff;
+}
+
+.filter_price input::placeholder{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.03em;
+    color: #ACACAC;
+}
+.filter_price input::-webkit-outer-spin-button,
+.filter_price input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.filter_price_title,  .sort_title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+.custom_checkbox{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000000;
+    margin: 0;
+    border-radius:7px;
+    appearance: none;
+    outline: none;
+    position: relative;
+    background-color: #fff;
+}
+
+.checkbox_label {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    border-radius: 7px;
+  }
+.sort{
+    border-radius: 7px;
+}
+.sort select{
+    width: 160px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    font-family: 'Montserrat';
+    padding-left: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.03em;
+    color: #797979;
+}
+  
+  .custom_checkbox:checked {
+    background-color:#339933;
+    border: none;
+  }
+  
+
+.custom_checkbox:checked:after {
+    content: '✓';
+    font-size: 28px;
+    position: absolute;
+    top: 1%;
+    left: 25%;
+    /* transform: translate(-50%, -50%); */
+    /* width: 0;
+    height: 0; */
+    color: #fff;
+  }
+  
+
+  @media (max-width: 520px){
+    .wrapper{
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 10px;  
+    }
+    .filter_price, .discount, .sort{
+        gap: 10px;
+    }
+    .filter_price input{
+        width: 60px;
+        height: 26px;
+    }
+    .filter_price button{
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        background-color: #fff;
+    }
+     
+    .filter_price button:active{
+        background-color: #339933;;
+        transition: 3ms;
+        /* border: 1px solid #4CAF50; */
+        border: none;
+        color: #fff;
+    }
+    
+    .filter_price input::placeholder{
+        font-size: 12px;
+    }
+    .filter_price input::-webkit-outer-spin-button,
+    .filter_price input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+    .filter_price_title,  .sort_title{
+        font-size: 12px;
+    }
+    .custom_checkbox{
+        width: 30px;
+        height: 30px;
+        
+    }
+    .checkbox_label {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+    .custom_checkbox:checked:after { 
+        font-size: 20px;
+    }
+    .sort{
+        border-radius: 7px;
+    }
+    .sort select{
+        width: 90px;
+        height: 30px;
+        font-size: 12px;
+        padding-left: 5px;
+    }
+    
+  }
+  

@@ -1,0 +1,320 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    /* width: 1440px; */
+    
+    
+}
+
+.block_links{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    text-decoration: none;
+/* identical to box height, or 26px */
+}
+.block_links a{
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: #000000;
+    align-self: baseline;
+}
+.wrapper_main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container_list{
+    height: 630px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+.container_list_items{
+    width: 100%;
+    height: 97%;
+    /* height: 600px; */
+    overflow-y: scroll;
+    /* position: relative;*/
+} 
+.container_list_items::-webkit-scrollbar{
+    width: 0;
+}
+.line{
+    width: 95%;
+    height: 1px;
+    background: #A7A7A7;
+}
+.container_calculation{
+    padding: 0 25px 25px 25px;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 400px;
+    height: 393px;
+    /* border: 1px solid #000000; */
+    border-radius: 21px;   
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    /* gap: 20px; */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.total_title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+.total_count{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+.container_calculation_title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+.total_count span{
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    /* width: 446px; */
+    /* height: 76px; */
+}
+.form input{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    line-height: 25px;
+    font-size: 25px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+}
+
+.form input::placeholder{
+    padding :25px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    color: #929292;
+}
+.form button{
+    width: 100%;
+    height: 72px;
+    background: #339933;
+    border-radius: 17px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+}
+.modal {
+    /* width: 1440px; */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.539);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+.modal_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 700px;
+    /* height: 600px; */
+    background-color: rgb(228, 240, 222);
+    padding: 20px;
+    border-radius: 9px;
+    position: relative;
+    box-shadow:rgb(149, 173, 9) 5px 4px 16px, rgba(195, 227, 65, 0.587) 5px 8px 24px, rgba(11, 171, 17, 0.539) 5px 16px 56px;
+    /* box-shadow: rgb(149, 173, 9) 0px 20px 30px -10px; */
+  }
+
+  .modal_btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    /* border: 1px solid black; */
+    border-radius: 3px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal_pdf_btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background: #c7f36176;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+}
+
+.modal_pdf_btn:active {
+    background-color: rgba(15, 118, 15, 0.409);
+}
+.order_id{
+    padding-left: 30px;
+    color: #fd1d20;
+    font-size: 25px;
+}
+.order_phone{
+    padding-left: 35px;
+    /* color: #1d25fd; */
+    color: #07bf07;
+    font-size: 35px;
+}
+.table{
+    width: 80%;
+    border-collapse: collapse;
+}
+.tableHeader{
+    background-color: #f2f2f2;
+    font-weight: bold;
+    padding: 10px;
+}
+.tableCell{
+    padding: 10px;
+}
+.table th,
+.table td {
+  border: 1px solid #ccc;
+
+}
+@media (max-width: 520px){
+    .wrapper_main{
+        gap: 10px;
+    }
+    .block_links{ 
+        gap: 20px;
+    }
+    .block_links a{
+        font-size: 10px;
+    }
+    .wrapper_main{
+        margin: 10px;
+    }
+   
+    .container_calculation{
+        /* padding: 0 15px 15px 15px; */
+        margin-left: 10px;
+        margin-right: 10px;
+        width:  180px;
+        height: 200px;
+        border-radius: 18px;   
+    }
+    .total{
+        display: flex;
+        flex-direction: row;
+        padding-top: 15px;
+        justify-content: space-between;
+    }
+    .total_title{
+        margin: 0;
+        font-size: 15px;
+    }
+    .total_count{
+        font-size: 20px;
+        margin: 0;
+    }
+    .container_calculation_title{
+        margin: 0;
+        font-size: 20px;
+    }
+    .total_count span{
+        font-size: 11px;
+    }
+    .form{
+        gap: 15px;
+      
+    }
+    .form input{
+        width: 96%;
+        height: 30px;
+
+        border-radius: 9px;
+
+        font-size: 15px;
+     
+    }
+    
+    .form input::placeholder{
+        padding :10px;
+        font-size: 13px;
+
+    }
+    .form button{
+        width: 100%;
+        height: 34px;
+        border: none;
+        border-radius: 9px;
+        font-size: 14px;
+    }
+}

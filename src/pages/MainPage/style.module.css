@@ -1,0 +1,11 @@
+.container{
+    /* width: 1440px; */
+    width: 100%;
+    background: #E5E5E5;
+    
+}@media (max-width: 520px){
+    .container{
+    
+}
+}
+
