@@ -33,9 +33,9 @@ export default function BasketItem({id, image, title, price, discont_price, coun
             {discont_price === null ? <p className={s.discont_price}>{price}<span>$</span></p> : <p className={s.normal_price}>{price}$</p> } 
         </div>
         <button className={s.container_btn} onClick={()=> dispath(remove_basket(id))}>x</button>
-        
+        <p className={s.liner}></p>
     </div>
-    <p className={s.line}></p>
+    {/* <p className={s.line}></p> */}
     </>
   )
 }

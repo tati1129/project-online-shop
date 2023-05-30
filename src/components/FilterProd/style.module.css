@@ -1,24 +1,23 @@
 .wrapper{
-    /* width: 100%; */
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 40px;
     margin: 0 30px 30px 30px;
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; */
 }
-.filter_price, .discount, .sort{
+.filter_price, .discount, .sort, .filter_title{
     display: flex;
     align-items: center;
     gap: 15px;
 }
 .filter_price input{
-    width: 100px;
+    width: 70px;
     height: 40px;
     border: 1px solid #000000;
     border-radius: 7px;
     padding-left: 10px;
+    font-size: 18px;
 }
 .filter_price button{
     width: 40px;
@@ -64,7 +63,28 @@
     letter-spacing: 0.03em;
     color: #000000;
 }
-
+.filter_title{
+    flex-direction: row;
+}
+.filter_title input{
+    margin-left: 10px;
+    width: 130px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #000;
+}
+.filter_title input::placeholder{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.03em;
+    color: #ACACAC;
+}
 .custom_checkbox{
     width: 40px;
     height: 40px;
@@ -124,43 +144,38 @@
   }
   
 
-  @media (max-width: 520px){
+  @media (max-width: 768px){
     .wrapper{
         margin-bottom: 20px;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-self: start;
         gap: 10px;  
     }
-    .filter_price, .discount, .sort{
-        gap: 10px;
+    .discount:nth-child(4),
+    .sort:nth-child(3){
+        grid-column: span 1;
     }
     .filter_price input{
-        width: 60px;
-        height: 26px;
+        height: 30px;
     }
     .filter_price button{
         width: 30px;
-        height: 30px;
-        font-size: 20px;
-        background-color: #fff;
+        height: 32px;
+        font-size: 17px;
     }
-     
-    .filter_price button:active{
-        background-color: #339933;;
-        transition: 3ms;
-        /* border: 1px solid #4CAF50; */
-        border: none;
-        color: #fff;
-    }
-    
     .filter_price input::placeholder{
-        font-size: 12px;
-    }
-    .filter_price input::-webkit-outer-spin-button,
-    .filter_price input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
+        font-size: 14px;
     }
     .filter_price_title,  .sort_title{
-        font-size: 12px;
+        font-size: 18px;
+    }
+    .filter_title input{
+        height: 30px;
+        font-size: 16px;
+    }
+    .filter_title input::placeholder{
+        font-size: 14px;
     }
     .custom_checkbox{
         width: 30px;
@@ -168,21 +183,50 @@
         
     }
     .checkbox_label {
-        padding-left: 10px;
-        font-size: 12px;
+        font-size: 18px;
     }
     .custom_checkbox:checked:after { 
         font-size: 20px;
     }
-    .sort{
-        border-radius: 7px;
-    }
     .sort select{
         width: 90px;
         height: 30px;
-        font-size: 12px;
+        font-size: 14px;
         padding-left: 5px;
     }
     
+  }
+  
+  @media (max-width: 520px){
+    .filter_price, .discount, .sort{
+        gap: 10px;
+    }
+    .filter_price input{
+        height: 26px;
+    }
+    .filter_price button{
+        height: 30px;
+        font-size: 15px;
+    }
+    .filter_price input::placeholder{
+        font-size: 12px;
+    }
+    .filter_price_title,  .sort_title{
+        font-size: 12px;
+    }
+    .filter_title input{
+        height: 26px;
+        font-size: 14px;
+    }
+    .filter_title input::placeholder{
+        font-size: 12px;
+    }
+    .checkbox_label {
+        font-size: 12px;
+    }
+    .sort select{
+        font-size: 12px;
+        padding-left: 5px;
+    }
   }
   

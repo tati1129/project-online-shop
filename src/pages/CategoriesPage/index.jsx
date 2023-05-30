@@ -24,15 +24,3 @@ const category = useSelector(state => state.categories.list)
     </div>
   )
 }
-/* 
-{categories.map((category) => (
-          <li key={category.id}>
-            <NavLink
-            //   onClick={onClick}
-              className={isActive}
-              to={`/products/${category.title}`}
-            >
-              <p>{category.title}</p>
-            </NavLink>
-            </li>
-        ))} */

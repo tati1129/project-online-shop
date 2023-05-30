@@ -4,7 +4,7 @@ import s from './style.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 // import CustNavLink from '../CustNavLink'
-import {  NavLink,  useLocation, useNavigate } from 'react-router-dom'
+import {  NavLink,  useLocation} from 'react-router-dom'
 import { useRef } from 'react'
 import { useState } from 'react'
 
@@ -30,7 +30,6 @@ export default function Header() {
 
     const navBtnHandler =() => {
     navigation.current.classList.toggle(s.nav_open);
-
 
     }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import s from './style.module.css'
 import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux';
@@ -12,22 +12,9 @@ export default function CatalogMain() {
 const categoriesRandom = [...categ].slice().sort(() => 0.5 - Math.random()).slice(0, 4);
 
 
-  // const random = [];
-  // while (random.length < 4){
-  //   const index = Math.round(Math.random()  * list.length);
-  //   random.push(list[index])
-  // } 
- 
 if (status === 'rejected'){
   alert(error)
 }
-
-/* const categoryRandom = [];
-    while (categoryRandom.length < 4) {
-      const randomIndex =  Math.round(Math.random()  * list.length);
-      categoryRandom.push(list[randomIndex]);
-    }
-    console.log(categoryRandom); */
 
   return (
     <div className={s.container}>

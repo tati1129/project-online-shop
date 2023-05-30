@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-
-
 import 'react-phone-number-input/style.css'
 import { useForm } from 'react-hook-form';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import s from './style.module.css'
 
 
@@ -42,8 +42,7 @@ export default function DiscountFormMain() {
       })
       setDiscountCode(code);
     
-  
-
+      
     fetch('http://localhost:3333/sale/send',{
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -56,6 +55,10 @@ export default function DiscountFormMain() {
       })
   }
  
+  const notify = () => {
+    toast.success("Code copied successfully");}
+
+
     const closeModal = () => {
       setIsModalOpen(false);
       setIsCodeUsed(false);
@@ -63,12 +66,11 @@ export default function DiscountFormMain() {
 
   return (
     <div className={s.container}>
-        {/* <div className={s.container_img}><img src={img} alt="" /></div> */}
         <div className={s.container_form}>
             <p className={s.container_form_discount}>5% off </p>
             <p className={s.container_form_info}>on the first order</p>
             <form className={s.form} onSubmit={handleSubmit(onSubmit)} method='POST' >
-              <input  /* type="number" */ {...register("phone", {pattern: /^[0-9]{12,14}$/g})} placeholder='+49' />
+              <input   type="number" {...register("phone", {pattern: /^\d{12}$/g})} placeholder='+ 49' />
               <button className={s.form_btn}>Get a discount</button>
             </form>
         </div>
@@ -83,14 +85,18 @@ export default function DiscountFormMain() {
                 <p className={s.kod_title}>Your discount code is:</p>
                
                   <p className={s.kod}>{discountCode}</p>
-              <CopyToClipboard text={discountCode}>
-                <button className={s.modal_copy_btn}>Copy</button>
+              <CopyToClipboard text={discountCode} >
+                <button className={s.modal_copy_btn} onClick={notify}>Copy</button>
               </CopyToClipboard>
               </>
             )}
             </div>
           </div>
         )}
+        <ToastContainer 
+          autoClose={200}
+          theme="light"
+        />
     </div>
   )
 }

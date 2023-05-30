@@ -1,12 +1,11 @@
 import React from 'react'
 import s from './style.module.css'
 import Map from '../Map'
-import shipping from '../../image/ship.jpg'
-import eco from '../../image/eco.jpg'
 
 
 import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook,faTwitter,faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { useJsApiLoader } from '@react-google-maps/api'
 
 
@@ -30,12 +29,6 @@ export default function Footer() {
       <div className={s.contacts_block}>
         
         
-        <div className={s.img_ecofriendly}>
-          <img src={eco} alt="" />
-        </div>
-        <div className={s.img_shipping}>
-          <img src={shipping} alt="" />
-        </div>
         <div className={s.contact_info}>
           <p className={s.contact_info_title}>Contact</p>
           <p className={s.contact_tel}> +49 999 999 99 99</p>
@@ -44,23 +37,29 @@ export default function Footer() {
        
         <div className={s.address}>
           <p className={s.address_title}>Address</p>
-          <p className={s.address_info}>Linkstraße 2, 8 OG, 10785,<br/> Berlin, Deutschland</p> 
+          <p className={s.address_info}>Linkstraße 2, 8OG, <br/>  10785,Berlin, <br/> Deutschland</p> 
         </div>
         <div className={s.working}>
 
           <p className={s.work_info}>Working Hours:</p>
           
           <p className={s.work_time}>24 hours a day</p>
-          <div className={s.buttons}>
-          <button className={s.btns} ><FontAwesomeIcon  icon={faInstagram} className={s.btn} /></button>
-          <button className={s.btns}><FontAwesomeIcon icon={faWhatsapp} className={s.btn} /></button>
-        </div>
-        </div>
+          </div>
+          
         </div>
         <div className={s.map}>
           {isLoaded ? <Map center={defaultCenter} /> :  <h2>Loading ...</h2>}
         </div>
- 
+
+ <div className={s.buttons}>
+          <button className={s.btns} ><FontAwesomeIcon  icon={faInstagram} className={s.btn} /></button>
+          <button className={s.btns}><FontAwesomeIcon icon={faWhatsapp} className={s.btn} /></button>
+          <button className={s.btns}><FontAwesomeIcon icon={faTwitter} className={s.btn} /></button>
+        <button className={s.btns}><FontAwesomeIcon icon={faFacebook}className={s.btn} /></button>
+        
+        <button className={s.btns}><FontAwesomeIcon icon={faGoogle} className={s.btn} /></button>
+
+        </div>
     </div>
   )
 }

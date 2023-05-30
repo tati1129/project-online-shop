@@ -59,11 +59,6 @@
     background: #E5E5E5;
 }
 .basket_icon{
-    /* width: 40px;
-    height: 40px;
-     */
-    /* display: flex; */
-    /* justify-content: center; */
     font-size: 25px;
     margin-right: 40px;
     color: gray;
@@ -139,16 +134,13 @@
     .active{
         font-weight: 700;
         font-size: 16px;
-        
     }
     .activeCatalog{
         font-size: 17px;
     }
     .navBtn{
         display: block; 
-       
     } 
-
     .navigation{
         background-color: rgba(0, 0, 0, 0.539);
         width: 140px;
@@ -163,9 +155,8 @@
         pointer-events: none;
         position: absolute;
 
-       background-color: rgba(5, 90, 32, 0.607);
-    box-shadow: 0 0 5px 5px rgba(125, 214, 8, 0.495);
-    /* border-radius: 10px; */
+        background-color: rgba(5, 90, 32, 0.607);
+        box-shadow: 0 0 5px 5px rgba(125, 214, 8, 0.495);
 
         opacity: 0; /* //сверху вниз */
         right: 0;
@@ -175,9 +166,6 @@
         transition: transform, opacity, background;
         transition-duration: 0.5s;
 
-        
-        
-        
         /* right:  100%; справа к центру 
         left: 100%;
         top: 89px;
@@ -186,13 +174,40 @@
         transition-duration: 0.5s; */
     }
     .nav_open{
-        /* display: flex; */
-     
         opacity: 1;
         pointer-events: auto;
         /* transform: translateX(0); */
         /* background: #E5E5E5;*/
         background-color: rgb(228, 240, 222);
         transform: translateY(0); /* //сверху вниз */
+    }
+}
+@media (max-width: 767px){
+    .container{
+        height: 100px;
+    }
+    .logo_block{
+        width: 200px ;
+        gap: 20px;
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+        margin-left: 20px;
+    }
+    .catalog{
+        width: 70px;
+        padding: 10px 15px 10px;
+        font-size: 10px;
+        line-height: 10px;
+    }
+    .activeCatalog{
+        font-size: 16px;
+    }
+    .links{
+        font-size: 13px;
+    }
+    .active{
+        font-size: 16px; 
     }
 }

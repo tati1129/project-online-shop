@@ -12,15 +12,14 @@ import FilterProd from '../../components/FilterProd';
 
 export default function ProductsPage() {
 
- const params = useParams();
+  const params = useParams();
   const productsAll = useSelector(state => state.products.list) 
-  // console.log(productsAll);
   const categoriesAll = useSelector(state => state.categories.list);
+
   const [products, setProducts] = useState(productsAll)
   const [categories, setCategory] = useState([])
-
   const [showDiscount, setShowDiscount] = useState(false)
-  // const [sort, setSort] = useState()
+
 
  useEffect(()=> {
   if (params.id) {
@@ -46,47 +45,30 @@ const handleDiscountChange = (e) => {
   setShowDiscount(e.target.checked)
 }
 
-/* const params = useParams();
-const categories = useSelector((state => state.categories.list))
-console.log(params);
 
-const products = useSelector(state => {
-  if (params === undefined){
-    return state.products.list
-  } else if(params === 'sale'){
-    return state.products.list.filter(
-      ({product}) => product.discont_price !== null
-    );
-  } else {
-    const currentCategory = categories.find((cat) => cat.title === params);
-    return state.products.list.filter(
-      (prod) => prod.categoryId === currentCategory.id
-    );
-  }
-})
-
- */
 
   return (
     <>
-    <div className={s.wrapper}>
-      <h2 className={s.title}>
-      {params.id ? categories?.title || "Loading..." :
-      params.sale ? "Products with sale" :
-      "All products"}
-    </h2>
-    <FilterProd showDiscount={showDiscount} onDiscountChange={handleDiscountChange} />
+      <div className={s.wrapper}>
+        <h2 className={s.title}>
+        {params.id ? categories?.title || "Loading..." :
+        params.sale ? "Products with sale" :
+        "All products"}
+        </h2>
 
-    <div className={s.products}>
-      {
-        products
-        .filter(item => !showDiscount || item.discont_price)
-        .filter(item => item.showFilteredPrice)
-        .map(item => <ProductItem key={item.id} {...item} />)
-      }
-    </div>
-    
-    </div>
+        <FilterProd showDiscount={showDiscount} onDiscountChange={handleDiscountChange} />
+
+        <div className={s.products}>
+          {
+            products
+            .filter(item => !showDiscount || item.discont_price)
+            .filter(item => item.showByTitle)
+            .filter(item => item.showFilteredPrice)
+            .map(item => <ProductItem key={item.id} {...item} />)
+          }
+        </div>
+      
+      </div>
     </>
   )
 }

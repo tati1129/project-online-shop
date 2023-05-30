@@ -11,7 +11,7 @@ export const fetchProducts = createAsyncThunk(
       const data = await resp.json();
       const newData = data.map(({ ...item }) => ({
         ...item,
-        show: true,
+        showByTitle: true,
         showFilteredPrice: true,
         showOnlyDiscounted: true,
         new_price: item.discont_price ? item.discont_price : item.price,
@@ -53,23 +53,21 @@ export const productsSlice = createSlice({
           .sort((a, b) => b.new_price - a.new_price);
       } 
     },
+
     filter_by_price: (state, { payload }) => {
- 
-      // console.log(payload.min, payload.max);
-      // state.min = payload.min; 
-      // state.max = payload.max;
-      // console.log(payload)
-      
-      state.list = state.list.map((item) => {
-        // console.log(item)
-        if (!(item.new_price >= payload.min && item.new_price <= payload.max)) {
-          return { ...item, showFilteredPrice: false };
-        } else {
-          return { ...item, showFilteredPrice: true };
-          
-        }
-      });
+      state.list = state.list.map((item) => 
+        !(item.new_price >= payload.min && item.new_price <= payload.max) 
+        ? { ...item, showFilteredPrice: false }
+        : { ...item, showFilteredPrice: true }
+      );
       // console.log(state.list);
+    },
+    
+    searchProductsByName: (state, { payload }) => {
+      state.list = state.list.map(item => ({
+        ...item,
+        showByTitle: item.title.toLowerCase().startsWith(payload.toLowerCase())
+      }))
     },
     clearFilters: (state) => {
       state.min = null;
@@ -94,26 +92,13 @@ export const productsSlice = createSlice({
   },
 });
 
-export const { discount_filter, sort, clearFilters, filter_by_price } =
+export const { discount_filter, sort, clearFilters, searchProductsByName, filter_by_price, } =
   productsSlice.actions;
 export default productsSlice.reducer;
 
-/* state.list = state.list.slice().map(elem => ({ ...elem, showPrice: true }));
-  return state.map(elem => {
-    if (!(elem.new_price >= payload.from && elem.new_price <= payload.to)) {
-      elem.showPrice = false;
-    }
-    return elem;
-  });
-         */
 
   
-  /*  async () => {
-        const resp = await fetch('http://localhost:3333/products/all');
-        const data = await resp.json()
-        // console.log(data);
-        return data; 
-    } */
+
 
     //     clearFilters: (state) => {
 //       state.sortType = "";

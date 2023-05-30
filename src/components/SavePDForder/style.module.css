@@ -1,0 +1,104 @@
+
+.modal {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.539);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+.modal_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 700px;
+    background-color: rgb(228, 240, 222);
+    padding: 20px;
+    border-radius: 9px;
+    position: relative;
+    box-shadow:rgb(149, 173, 9) 5px 4px 16px, rgba(195, 227, 65, 0.587) 5px 8px 24px, rgba(11, 171, 17, 0.539) 5px 16px 56px;
+  }
+
+  .modal_btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 3px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal_pdf_btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background: #c7f36176;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.modal_pdf_btn:active {
+    background-color: rgba(15, 118, 15, 0.409);
+}
+.order_id{
+    padding-left: 30px;
+    color: #fd1d20;
+    font-size: 25px;
+}
+.order_phone{
+    padding-left: 35px;
+    /* color: #1d25fd; */
+    color: #07bf07;
+    font-size: 35px;
+}
+.table{
+    width: 80%;
+    border-collapse: collapse;
+}
+.tableHeader{
+    background-color: #f2f2f2;
+    font-weight: bold;
+    padding: 10px;
+}
+.tableCell{
+    padding: 10px;
+}
+.table th,
+.table td {
+  border: 1px solid #ccc;
+
+}
+
+@media (max-width: 767px){ 
+    .modal_content {
+        width: 80%;
+      }
+}
+@media (max-width: 520px){  
+    .modal_content {
+        width: 75%;
+        gap: 0;
+      }
+    
+    .modal_btn {
+        font-size: 25px;
+    }
+    .order_id{
+        padding-left: 20px;
+        font-size: 20px;
+    }
+    .order_phone{
+        padding-left: 20px;
+        font-size: 25px;
+    }
+}

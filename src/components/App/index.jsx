@@ -63,3 +63,10 @@ export default App;
       <Route path="/categories/:category" element={<TestCategoryProdPage />} />
       
       <Route path='/*' element={<NotFoundPage />} /> */
+
+
+ /*      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      }); */

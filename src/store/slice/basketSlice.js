@@ -31,9 +31,12 @@ export const basketSlice = createSlice({
         remove_basket: (state, {payload}) => {
             state.list = state.list.filter(({id}) => id !== payload)
         },
+        clear_basket: (state, {payload}) =>{
+            state.list = []
+        }
        
     }
 })
 
-export const { add_basket, increment_basket, decrement_basket, remove_basket} = basketSlice.actions;
+export const { add_basket, increment_basket, decrement_basket, remove_basket, clear_basket} = basketSlice.actions;
 export default basketSlice.reducer;

@@ -20,14 +20,3 @@ export default function CategoryItem({id, image, title,}) {
   )
 }
 
-/* {categories.map((category) => (
-          <li key={category.id}>
-            <NavLink
-            //   onClick={onClick}
-              className={isActive}
-              to={`/products/${category.title}`}
-            >
-              <p>{category.title}</p>
-            </NavLink>
-            </li>
-        ))} */

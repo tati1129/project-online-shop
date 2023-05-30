@@ -1,14 +1,11 @@
-.container{
+.container {
     width: 300px;
     display: flex;
     flex-direction: column;
-    /* gap: 20px; */
-    /* display: block; */
     margin-bottom: 10px;
-   
-    
 }
-.image{
+
+.image {
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -16,14 +13,14 @@
     border-radius: 10px;
 }
 
-.block_price{
+.block_price {
     height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
 
-.price_normal{
+.price_normal {
     padding-left: 10px;
     font-family: 'Montserrat';
     font-style: normal;
@@ -35,7 +32,7 @@
     color: #8B8B8B;
 }
 
-.price_discount{
+.price_discount {
     padding-left: 10px;
     font-family: 'Montserrat';
     font-style: normal;
@@ -46,7 +43,7 @@
     color: #000000;
 }
 
-.price_percent{
+.price_percent {
     padding-right: 10px;
     font-family: 'Montserrat';
     font-style: normal;
@@ -57,10 +54,7 @@
     color: #FF32A1;
 }
 
-.title{
-    
-    /* height: 90px; */
-    /* margin-bottom: 10px; */
+.title {
     display: flex;
     justify-content: center;
     font-family: 'Montserrat';
@@ -71,85 +65,127 @@
     letter-spacing: 0.05em;
     color: #3A3A3A;
 }
-.block_img{
+
+.block_img {
     display: flex;
     justify-content: center;
     cursor: pointer;
     position: relative;
 }
 
-.btn_basket{
-    position: absolute; 
-    bottom: 0%;/* положение кнопки относительно верхней границы блока */
-    left: 50%; /* положение кнопки относительно левой границы блока */
-    transform: translate(-50%, 0); /* Центрируйте кнопку в блоке */
-    opacity: 0; /* Скрыть кнопку по умолчанию */
-    transition: opacity 0.3s ease-in-out; /* Добавить плавный переход для анимации */
+.btn_basket {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
     width: 150px;
     height: 70px;
     background: #e7f3f1d2;
     border: none;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    /* background-color: rgba(125, 214, 8, 0.495); */
 }
-.btn_basket:active{
+
+.btn_basket:active {
     background-color: #FFFFFF;
 }
 
-.container:hover .btn_basket{
+.container:hover .btn_basket {
     opacity: 1;
 }
-.basket_icon{
+
+.basket_icon {
     width: 30px;
     height: 29px;
     color: #0c700c;
 }
 
-@media (max-width: 520px){
-    .container{
-        width: 130px;
-        
+@media (max-width: 767px) {
+    .container {
+        flex-wrap: wrap;
+        align-content: center;
+        width: 160px;
+        margin: 0;
     }
-    .image{
-        height: 130px;
+
+    .image {
+        height: 150px;
     }
-    .block_price{
-        height: 40px;
+
+    .block_price {
+        height: 50px;
     }
-    .price_discount{
-        font-size: 12px; 
+
+    .price_discount {
+        font-size: 15px;
     }
-    .price_normal{
-        font-size: 10px;
-    }
-    .price_percent{
+
+    .price_normal {
         font-size: 12px;
     }
-    
-    .title p{
-        /* height: 30px; */
-        font-size: 10px;
-        line-height: 100%;
-     
+
+    .price_percent {
+        font-size: 15px;
     }
-    .btn_basket{
+
+    .title {
+        font-size: 13px;
+        line-height: 100%;
+    }
+
+    .btn_basket {
         opacity: 1;
-        width: 60px;
+        width: 70px;
         height: 30px;
         border-radius: 7px;
         background: hsla(170, 20%, 94%, 0.674);
     }
-    .btn_basket:active{
-        background-color: #FFFFFF;
+
+    .basket_icon {
+        width: 20px;
+        height: 20px;
+
     }
-    
-    .container:hover .btn_basket{
-        opacity: 1;
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: 130px;
     }
-    .basket_icon{
+
+    .image {
+        height: 130px;
+    }
+
+    .block_price {
+        height: 40px;
+    }
+
+    .price_discount {
+        font-size: 12px;
+    }
+
+    .price_normal {
+        font-size: 10px;
+    }
+
+    .price_percent {
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: 10px;
+    }
+
+    .btn_basket {
+        width: 60px;
+        height: 25px;
+    }
+
+    .basket_icon {
         width: 25px;
         height: 15px;
-        color: #0c700c;
     }
 }

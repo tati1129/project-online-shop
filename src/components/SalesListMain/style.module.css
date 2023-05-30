@@ -1,11 +1,6 @@
 .wrapper{
-    /* width: 1440px; */
     width: 100%;
-    /* height: 600px; */
     margin-left: 30px;
-
-
-    
 }
 .block_btns{
     height: 200px;
@@ -31,7 +26,6 @@
     background: #b9f5be30;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    /* border: 2px solid #8B8B8B; */
     margin-left: 100px;
 }
 .sale_btn a{
@@ -49,20 +43,30 @@
 
 
 .block_items{
-    
-    margin: auto;
     display: grid;
-    justify-content: center;
+    /* justify-content: center; */
     /* margin-top: 20px; */
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    justify-items: start;
+    /* justify-content: flex-start; */
+    /* justify-self: start; */
+    gap: 20px;
     
 }
-@media (max-width: 520px){
+@media (max-width: 767px){
+    .wrapper{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .block_items{
+        gap: 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
+@media (max-width: 520px){
     .block_btns{
         height: 100px;
-        
     } 
     .title{
         margin-left: 20px;
@@ -75,6 +79,5 @@
     .block_items{
         gap: 10px;
         justify-items: center;
-
     }
 }

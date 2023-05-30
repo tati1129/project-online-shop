@@ -28,3 +28,27 @@ h2{
     font-size: 80px;
     margin: 0;
 }
+@media (max-width: 767px){
+    .wrapper{
+        height: 400px;
+    }
+    .info{
+        top: 10%;
+        right: 20%;
+    }
+    h2{
+        font-size: 60px;
+    }
+}
+@media (max-width: 520px){
+    .wrapper{
+        height: 220px;
+    }
+    .info{
+        top: 5%;
+        right: 15%;
+    }
+    h2{
+        font-size: 50px;
+    }
+}
