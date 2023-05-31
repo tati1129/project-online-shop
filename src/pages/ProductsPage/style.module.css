@@ -26,6 +26,18 @@
     letter-spacing: 0.03em;
     color: #000000;
 }
+.scrollButton{
+    margin: 20px;
+    align-self: self-end;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    background: #339933;
+}
 @media (max-width: 767px){
     .products{
         margin: 0 20px 0 20px;

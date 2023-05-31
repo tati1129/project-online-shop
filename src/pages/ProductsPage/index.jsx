@@ -1,7 +1,5 @@
 import React from 'react'
-// import AllProducts from '../../components/AllProducts'
 import s from './style.module.css'
-// import ProductsList from '../../components/ProductsList'
 import { useParams } from 'react-router'
 import { useSelector } from 'react-redux';
 import ProductItem from '../../components/ProductItem';
@@ -46,7 +44,6 @@ const handleDiscountChange = (e) => {
 }
 
 
-
   return (
     <>
       <div className={s.wrapper}>
@@ -67,7 +64,7 @@ const handleDiscountChange = (e) => {
             .map(item => <ProductItem key={item.id} {...item} />)
           }
         </div>
-      
+        <button className={s.scrollButton} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>⬆ </button>
       </div>
     </>
   )

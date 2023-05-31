@@ -31,7 +31,6 @@ function App() {
       <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/categories" element={<CategoriesPage />} />
-     
       <Route path="/basket" element={<BasketPage />} />
       <Route path='/products/all' element={<ProductsPage />} />
       <Route path="/products/categories/:id" element={<ProductsPage/>}/>
@@ -39,8 +38,6 @@ function App() {
       <Route path="/product/:id" element={<ProductDescriptionPage />} />
       
       <Route path='/*' element={<NotFoundPage />} />
-      {/* <Route path="/categories/:category" element={<TestCategoryProdPage />} /> */}
-       {/* <Route path="/products/:title" element={<ProductsPage/>}/> */}
       
      </Routes>
 
@@ -51,19 +48,6 @@ function App() {
 }
 
 export default App;
-
-/* <Route path="/" element={<MainPage />} />
-      <Route path="/categories" element={<CategoriesPage />} />
-      <Route path="/products/:title" element={<ProductsPage/>}/>
-      <Route path="/basket" element={<BasketPage />} />
-      <Route path='/products/all' element={<ProductsPage />} />
-      <Route path="/products/:id" element={<ProductDescriptionPage />} />
-      <Route path='/sales' element={<ProductsPage />} />
-     
-      <Route path="/categories/:category" element={<TestCategoryProdPage />} />
-      
-      <Route path='/*' element={<NotFoundPage />} /> */
-
 
  /*      window.scroll({
         top: 0,

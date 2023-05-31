@@ -96,7 +96,9 @@ export default function BasketList() {
                         {
                             render()
                         }
+                
                     </div>
+                    
                 </div>
                 <div className={s.container_calculation}>
                     <p className={s.container_calculation_title} >Order details</p>
