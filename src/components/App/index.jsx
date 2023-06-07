@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { fetchProducts } from "../../store/slice/productsSlice";
 import { fetchCategories } from "../../store/slice/categoriesSlice";
 import MainPage from "../../pages/MainPage";
-
+import "./style.css"
 
 
 

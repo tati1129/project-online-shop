@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import ProductItem from '../ProductItem';
 import s from './style.module.css'
-import { Link, NavLink } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import ProductsPage from '../../pages/ProductsPage';
 
 
@@ -10,12 +10,9 @@ export default function SalesListMain() {
 
 
 const prodList = useSelector(state => state.products.list)
-// console.log(prodList);
-
 
     const products = prodList.filter(({discont_price}) => discont_price !== null )
 const productsRandom = products.slice().sort(() => 0.5 - Math.random()).slice(0, 3);
-//  console.log(productsRandom);
 
 
   return (

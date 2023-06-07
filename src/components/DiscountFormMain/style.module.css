@@ -60,7 +60,7 @@
 .form input {
     width: 300px;
     height: 70px;
-    padding: 0 50px;
+    /* padding: 0 50px; */
     background: #FFFFFF;
     border-radius: 25px;
     border: none;
@@ -68,8 +68,9 @@
 
 .form input::-webkit-outer-spin-button,
 .form input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
+
 .form input::placeholder {
     font-family: 'Montserrat';
     font-style: normal;
@@ -127,10 +128,10 @@
     padding: 20px;
     border-radius: 9px;
     position: relative;
-    box-shadow: rgb(149, 173, 9) 5px 4px 16px, rgba(195, 227, 65, 0.587) 5px 8px 24px, rgba(11, 171, 17, 0.539) 5px 16px 56px;
 }
 
 .kod_title_used {
+    margin-left: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,11 +186,52 @@
     background-color: rgba(15, 118, 15, 0.409);
 }
 
-@media (max-width: 520px){
+
+@media (max-width: 767px) {
     .container {
-        height: 450px;
+        /* width: 90%; */
+        height: 500px;
         background: url('../../image/fon7.jpg')
     }
+    .container_form {
+        width: 80%;
+        height: 400px;
+    }
+    .container_form_discount {
+        font-size: 50px;
+    }
+    .container_form_info {
+        font-size: 35px;
+    }
+    .form {
+        gap: 20px;
+    }
+    .form input {
+        height: 60px;
+    }
+    .form_btn {
+        height: 60px;
+    }
+    .modal_content {
+        width: 400px;
+        height: 350px;
+    }
+    .kod_title_used {
+        font-size: 25px;
+    }
+    .kod_title {
+        font-size: 30px;
+    }
+    .kod {
+        font-size: 50px;
+    }
+}
+@media (max-width: 520px) {
+    .container {
+        height: 400px;
+        /* background: url('../../image/fon7.jpg') */
+    }
+
     .container_form {
         width: 70%;
         height: 300px;
@@ -220,22 +262,23 @@
     .modal {
         background-color: rgba(0, 0, 0, 0.749);
     }
-    
+
     .modal_content {
         width: 320px;
         height: 280px;
-        box-shadow: rgb(149, 173, 9) 2px 5px 15px, rgba(195, 227, 65, 0.587) 2px 6px 18px, rgba(11, 171, 17, 0.539) 5px 10px 25px;
     }
-    
     .kod_title_used {
         font-size: 20px;
     }
     .kod_title {
         font-weight: 700;
-        font-size: 22px;
+        font-size: 20px;
     }
     .kod {
         font-weight: 600;
         font-size: 40px;
+    }
+    .modal_btn {
+        font-size: 20px;
     }
 }

@@ -65,30 +65,27 @@
     text-decoration: none;
 }
 .activeBasket{
-    font-size:35px;
-    /* width: 50px;
-    height: 55px;   */
+    font-size:30px;
     margin-right: 40px;
     color: rgb(58, 42, 42);
 }
 
 .links{
     display: flex;
-    /* flex-direction: row; */
     align-items: center;
     padding: 5px 10px;
     color: black;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 130%;
     text-decoration: none;
     
 }
 .active{
-    font-weight: 700;
-    font-size: 25px;
+    font-weight: 800;
+    font-size: 21px;
     
 }
 .navigation{
@@ -100,7 +97,6 @@
     margin-right: 26px;
     display: none;
     font-size: 40px;
-    /* background-color: transparent; */
     border: 2px solid black;
     border-radius: 50%;
     width: 50px;

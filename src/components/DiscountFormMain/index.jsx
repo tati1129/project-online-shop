@@ -70,7 +70,7 @@ export default function DiscountFormMain() {
             <p className={s.container_form_discount}>5% off </p>
             <p className={s.container_form_info}>on the first order</p>
             <form className={s.form} onSubmit={handleSubmit(onSubmit)} method='POST' >
-              <input   type="number" {...register("phone", {pattern: /^\d{12}$/g})} placeholder='+ 49' />
+              <input   type="number" {...register("phone", {required: true,pattern: /^\d{12}$/g})} placeholder='+ 49' />
               <button className={s.form_btn}>Get a discount</button>
             </form>
         </div>
