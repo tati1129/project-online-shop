@@ -4,7 +4,7 @@
     flex-direction: column;
     margin-bottom: 10px;
     background: #ffffff6f;
-    border-radius: 8ить жизнpx;
+    border-radius: 8px;
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
 }
 
@@ -17,7 +17,8 @@
 }
 
 .block_price {
-    height: 70px;
+    padding: 10px;
+    /* height: 70px; */
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -58,8 +59,9 @@
 }
 
 .title {
+    padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
